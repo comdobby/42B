@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 15:03:12 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/09 13:11:12 by saryu            ###   ########.fr       */
+/*   Created: 2023/05/16 12:32:12 by saryu             #+#    #+#             */
+/*   Updated: 2023/05/16 14:09:40 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,30 @@
 #include "libft.h"
 
 /**
- * The strlen() function calculates the length of the string pointed to 
- * bytes, excluding the terminating null byte ('\0').
+ * The strrchr() function returns a pointer to the last occurrence of the 
+ * character c in the string s.
 */
 
-size_t	ft_strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int		len;
+	char	*str;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	len = ft_strlen(s);
+	while (len >= 0)
+	{
+		if (s[len] == (char)c)
+			return ((char *)(s + len));
+		len--;
+	}
+	return (NULL);
 }
 /*
 #include <stdio.h>
 int	main(void)
 {
-	printf("%zu\n", ft_strlen("aaaaa"));
-	printf("%zu\n", ft_strlen("d"));
-	printf("%zu\n", ft_strlen(""));
+	char	s[20] = "abcccde";
+
+	printf("%s", ft_strrchr(s, 'c'));
 	return (0);
 }*/

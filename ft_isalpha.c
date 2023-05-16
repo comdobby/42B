@@ -6,11 +6,12 @@
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:02:18 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/02 11:49:04 by saryu            ###   ########.fr       */
+/*   Updated: 2023/05/16 13:57:40 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 /**
  * checks for an alphabetic character; in the standard "C" locale,

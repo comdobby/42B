@@ -6,11 +6,12 @@
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:55:18 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/02 11:59:50 by saryu            ###   ########.fr       */
+/*   Updated: 2023/05/16 13:57:35 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 /**
  * checks for an alphanumeric character; it is equivalent to 

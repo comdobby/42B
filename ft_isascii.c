@@ -6,11 +6,12 @@
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:58:48 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/02 12:03:42 by saryu            ###   ########.fr       */
+/*   Updated: 2023/05/16 13:57:49 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
+#include "libft.h"
 
 /**
  * checks whether c is a 7-bit unsigned char value that fits into

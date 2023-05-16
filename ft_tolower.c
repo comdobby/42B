@@ -6,12 +6,13 @@
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:32:33 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/02 15:35:07 by saryu            ###   ########.fr       */
+/*   Updated: 2023/05/16 13:58:04 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <unistd.h>
+#include "libft.h"
 
 /**
  * If c is an uppercase letter, tolower() returns its lowercase 

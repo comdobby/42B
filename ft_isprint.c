@@ -6,11 +6,12 @@
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 12:03:58 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/02 15:02:56 by saryu            ###   ########.fr       */
+/*   Updated: 2023/05/16 13:57:54 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 /**
  * checks for any printable character including space.

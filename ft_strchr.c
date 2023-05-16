@@ -6,11 +6,12 @@
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 11:57:23 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/16 12:21:08 by saryu            ###   ########.fr       */
+/*   Updated: 2023/05/16 13:57:58 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 /**
  * The strchr() function returns a pointer to the first occurrence of the
@@ -19,9 +20,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-		
-	i = 0;
 	while (*s != (char)c && *s != '\0')
 		s++;
 	if (*s == '\0' && (char)c != '\0')

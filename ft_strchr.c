@@ -5,17 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 15:35:23 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/02 15:37:05 by saryu            ###   ########.fr       */
+/*   Created: 2023/05/16 11:57:23 by saryu             #+#    #+#             */
+/*   Updated: 2023/05/16 12:21:08 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 /**
- * The  strchr() function returns a pointer to the first occurrence of 
- * the character c in the string s.
+ * The strchr() function returns a pointer to the first occurrence of the
+ * character c in the string s.
 */
 
 char	*ft_strchr(const char *s, int c)
-{}
+{
+	int		i;
+		
+	i = 0;
+	while (*s != (char)c && *s != '\0')
+		s++;
+	if (*s == '\0' && (char)c != '\0')
+		return (NULL);
+	return ((char *)s);
+}
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	s[20] = "abcde";
+
+	printf("%s", ft_strchr(s, 'c'));
+	return (0);
+}*/

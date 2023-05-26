@@ -30,7 +30,7 @@ SRCS_M = ft_isascii.c ft_strlcat.c ft_strnstr.c\
  ft_atoi.c ft_isdigit.c ft_strlcpy.c ft_strrchr.c\
  ft_isalnum.c ft_isprint.c ft_strlen.c ft_tolower.c\
  ft_isalpha.c ft_strchr.c ft_strncmp.c ft_toupper.c\
- ft_memset.c
+ ft_memset.c ft_memcpy.c
 #My source files. I want to check it so just use two example files
 
 SRCS = $(SRCS_M)

@@ -1,22 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   memset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: saryu <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 15:09:47 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/02 15:17:03 by saryu            ###   ########.fr       */
+/*   Created: 2023/05/26 16:33:41 by saryu             #+#    #+#             */
+/*   Updated: 2023/05/26 16:34:22 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
 /**
- * The memset() function fills the first n bytes of the memory area
+ * The  memset()  function  fills  the  first  n  bytes of the memory area
  * pointed to by s with the constant byte c.
-*/
+ * */
 
-void	*ft_memset(void *s, int c, size_t n)
-{}
+void    *ft_memset(void *s, int c, size_t n)
+{
+    size_t  i;
+    char    *result;
+
+    result = (char *)s;
+    i = 0;
+    while (i < n)
+        result[i++] = c;
+    return (result);
+}
+/*
+#include <stdio.h>
+int    main(void)
+{
+    char    a[20];
+    int     i = 0;
+
+    ft_memset(a, '0', 10);
+    while (i < sizeof(a))
+    {
+        printf("%c\n", a[i]);
+        i++;
+    }
+}*/

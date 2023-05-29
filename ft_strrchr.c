@@ -6,7 +6,7 @@
 /*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:32:12 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/16 14:09:40 by saryu            ###   ########.fr       */
+/*   Updated: 2023/05/24 16:26:20 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	int		len;
-	char	*str;
 
 	len = ft_strlen(s);
 	while (len >= 0)

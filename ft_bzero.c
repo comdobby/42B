@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saryu <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/26 16:33:41 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/26 16:34:22 by saryu            ###   ########.fr       */
+/*   Created: 2023/05/26 17:24:51 by saryu             #+#    #+#             */
+/*   Updated: 2023/05/26 17:24:53 by saryu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,33 @@
 #include "libft.h"
 
 /**
- * The  memset()  function  fills  the  first  n  bytes of the memory area
- * pointed to by s with the constant byte c.
+ * The  bzero()  function  erases  the  data  in the n bytes of the memory starting at the location pointed to by s,
+ * by writing zeros (bytes  containing '\0') to that area.
  * */
 
-void    *ft_memset(void *s, int c, size_t n)
+void    ft_bzero(void *s, size_t n)
 {
     size_t  i;
     char    *result;
 
-    result = (char *)s;
     i = 0;
+    result = (char *)s;
     while (i < n)
-        result[i++] = c;
-    return (result);
+        result[i++] = '\0';
 }
 /*
 #include <stdio.h>
-int    main(void)
+int main(void)
 {
-    char    a[20];
+    char    a[10];
     int     i = 0;
 
-    ft_memset(a, '0', 10);
-    while (i < sizeof(a))
+    ft_bzero(a, 10);
+    while (i < 10)
     {
         printf("%c\n", a[i]);
         i++;
     }
+
+    return (0);
 }*/

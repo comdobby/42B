@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:02:18 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/16 13:57:40 by saryu            ###   ########.fr       */
+/*   Updated: 2023/08/14 16:50:54 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ int	ft_isalpha(int c)
 }
 /*
 #include <stdio.h>
-int	main(void)
+int main(void)
 {
 	printf("%d\n", ft_isalpha('a'));
+	printf("%d\n", ft_isalpha(2));
+	printf("%d\n", ft_isalpha('!'));
 	return (0);
 }*/

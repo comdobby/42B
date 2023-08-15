@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 16:33:41 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/26 16:34:22 by saryu            ###   ########.fr       */
+/*   Updated: 2023/08/16 00:30:10 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,27 @@
 
 void    *ft_memset(void *s, int c, size_t n)
 {
-    size_t  i;
-    char    *result;
+	size_t i;
+	unsigned char *p;
 
-    result = (char *)s;
-    i = 0;
-    while (i < n)
-        result[i++] = c;
-    return (result);
+	i = 0;
+	p = (unsigned char *)s;
+	while(i < n)
+		p[i++] = c;
+	return (p);
 }
 /*
 #include <stdio.h>
 int    main(void)
 {
-    char    a[20];
+    char    a[10];
     int     i = 0;
 
     ft_memset(a, '0', 10);
     while (i < sizeof(a))
     {
-        printf("%c\n", a[i]);
+        printf("%c", a[i]);
         i++;
     }
+    return (0);
 }*/

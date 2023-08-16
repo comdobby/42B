@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:15:03 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/26 17:15:04 by saryu            ###   ########.fr       */
+/*   Updated: 2023/08/16 21:28:20 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,28 +22,24 @@
 
 void    *ft_memmove(void *dest, const void *src, size_t n)
 {
-    size_t  i;
+	unsigned char *dp;
+	const unsigned char *sp;
 
-    if (dest < src)
-    {
-        i = 0;
-        while (i < n)
-        {
-            ((char *)dest)[i] = ((char *)src)[i];
-        }
-    }
-    else
-    {
-        i = n;
-        while (i)
-        {
-            ((char *)dest)[i - 1] = ((char *)src)[i - 1];
-            i--;
-        }
-    }
-    return (dest);
+	dp = (unsigned char *)dest;
+	sp = (const unsigned char *)src;
+	if (dp > sp)
+	{
+		while (n > 0)
+		{
+			dp[n - 1] = sp[n - 1];
+			n--;
+		}
+	}
+	else
+		return (ft_memcpy(dp, sp, n));
+	return (dp);
 }
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -54,4 +50,4 @@ int main(void)
     printf("%s\n", dest);
 
     return (0);
-}
+}*/

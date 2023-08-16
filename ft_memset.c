@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 16:33:41 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/16 00:30:10 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/16 20:21:53 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,8 @@ void    *ft_memset(void *s, int c, size_t n)
 int    main(void)
 {
     char    a[10];
-    int     i = 0;
 
     ft_memset(a, '0', 10);
-    while (i < sizeof(a))
-    {
-        printf("%c", a[i]);
-        i++;
-    }
+    printf("%s", a);
     return (0);
 }*/

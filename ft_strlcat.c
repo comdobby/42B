@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 13:00:13 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/09 13:28:53 by saryu            ###   ########.fr       */
+/*   Updated: 2023/08/17 23:10:53 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-
+	
 	i = 0;
-	j = 0;
-	while (i < size && dst[i])
-		i++;
-	while (src[j] && (i + j + 1) < size)
+	j = 0; 
+	while (dst[i] && i < size)
+			i++;
+	while (src[j] && i + j + 1 < size)
 	{
 		dst[i + j] = src[j];
 		j++;
@@ -40,10 +40,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 #include <stdio.h>
 int	main(void)
 {
-	char	dst[30] = "123";
+	char	dst[30] = "12345";
 	char	src[30] = "456789";
 
-	printf("%zu\n", ft_strlcat(dst, src, 10));
-	printf("%s", dst);
+	printf("%zu\n", ft_strlcat(dst, src, 8));
+	printf("%s\n", dst);
 	return (0);
 }*/

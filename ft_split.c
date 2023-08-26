@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 21:11:51 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 14:33:11 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 21:57:08 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,66 @@
  * The array must end with a NULL pointer.
  * */
 
-// char    **ft_split(char const *s, char c)
-// {}
+int	get_count(const char *s, char c)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		if (i == 0)
+		{
+			if (s[i] != c)
+				count++;
+		}
+		else
+		{
+			if (s[i] != c && s[i - 1] == c)
+				count++;
+		}
+		i++;
+	}
+	return (count);
+}
+
+char	**split_str(char const *s, char c, char **result)
+{
+	size_t	i;
+	size_t	start;
+	size_t	split_i;
+
+	i = 0;
+	split_i = 0;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			start = i;
+			while (s[i] != c && s[i])
+				i++;
+			result[split_i++] = ft_substr(s, start, i - start);
+		}
+		else
+			i++;
+	}
+	result[split_i] = NULL;
+	return (result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	count;
+	char	**result;
+
+	count = get_count(s, c);
+	result = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!result)
+		return (NULL);
+	result = split_str(s, c, result);
+	return (result);
+}
 /*
 #include <stdio.h>
 int main(void)

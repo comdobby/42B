@@ -6,10 +6,9 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 15:32:33 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:16:41 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 14:30:41 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <unistd.h>
 #include "libft.h"

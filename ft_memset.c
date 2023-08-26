@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 16:33:41 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:13:59 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 14:29:24 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	i = 0;
 	p = (unsigned char *)s;
-	while(i < n)
+	while (i < n)
 		p[i++] = c;
 	return (p);
 }

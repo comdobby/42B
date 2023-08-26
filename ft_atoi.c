@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:37:24 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:11:26 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 14:20:55 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,43 +14,44 @@
 #include "libft.h"
 
 /**
- * The atoi() function converts the initial portion of the string pointed to by nptr to int.
+ * The atoi() function converts the initial portion of the string 
+ * pointed to by nptr to int.
 */
 
-int    ft_check(char c)
+int	ft_check(char c)
 {
-   if (c == ' ' || c == '\n' || c == '\t'
-      || c == '\v' || c == '\f' || c == '\r')
-      return (1);
-   else
-      return (0);
+	if (c == ' ' || c == '\n' || c == '\t'
+		|| c == '\v' || c == '\f' || c == '\r')
+		return (1);
+	else
+		return (0);
 }
 
-int   ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-   long     number;
-   long     sign;
-   size_t   i;
+	long	number;
+	long	sign;
+	size_t	i;
 
-   number = 0;
-   sign = 1;
-   i = 0;
-   while ((str[i] != '\0') && ft_check(str[i]))
-      i++;
-   if (str[i] == '-')
-      sign = -1;
-   if (str[i] == '+' || str[i] == '-')
-      i++;
-   while ((str[i] >= '0' && str[i] <= '9') && (str[i] != '\0'))
-   {
-      number = (number * 10) + (str[i] - 48);
-      if (number > 2147483647 && sign == 1)
-         return (0);
-      if (number > 2147483648 && sign == -1)
-         return (0);
-      i++;
-   }
-   return ((int)number * sign);
+	number = 0;
+	sign = 1;
+	i = 0;
+	while ((str[i] != '\0') && ft_check(str[i]))
+		i++;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while ((str[i] >= '0' && str[i] <= '9') && (str[i] != '\0'))
+	{
+		number = (number * 10) + (str[i] - 48);
+		if (number > 2147483647 && sign == 1)
+			return (0);
+		if (number > 2147483648 && sign == -1)
+			return (0);
+		i++;
+	}
+	return ((int)number * sign);
 }
 /*
 #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:51:37 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:15:35 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:37:36 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,23 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*s1p;
+	unsigned char	*s2p;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && i < n)
+	s1p = (unsigned char *)s1;
+	s2p = (unsigned char *)s2;
+	while ((s1p[i] || s2p[i]) && i < n)
 	{
-		if (s1[i] > s2[i] || s1[i] < s2[i])
-			return (s1[i] - s2[i]);
+		if (s1p[i] > s2p[i] || s1p[i] < s2p[i])
+			return (s1p[i] - s2p[i]);
 		i++;
 	}
+	if (i == n || (!s1p[i] && !s2p[i]))
+		return (0);
+	else if (s1p[i] > s2p[i] || s1p[i] < s2p[i])
+		return (s1p[i] - s2p[i]);
 	return (0);
 }
 /*

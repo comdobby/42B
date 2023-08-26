@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 18:54:35 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:14:17 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 14:30:24 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,17 @@
  * Outputs the string 's' to the given file descriptor followed by a newline.
  * */
 
-void    ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s[i] != '\0') {
-        ft_putchar_fd(s[i], fd);
-        write(1, "\n", 2);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0') 
+	{
+		ft_putchar_fd(s[i], fd);
+		write(1, "\n", 2);
+		i++;
+	}
 }
 /*
 #include <stdio.h>

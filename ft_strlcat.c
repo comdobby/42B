@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 13:00:13 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:40:27 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 14:32:30 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 #include "libft.h"
 
 /**
- * The strlcat() function appends the NULL-terminated string src to the end of dst.
- * It will append at most size - strlen(dst) - 1 bytes, NUL-terminating the result.
+ * The strlcat() function appends the NULL-terminated string 
+ * src to the end of dst. It will append at most size - strlen(dst) - 1 bytes, 
+ * NUL-terminating the result.
 */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)

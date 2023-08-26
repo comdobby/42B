@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:36:45 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:13:11 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:49:31 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t				i;
-	const unsigned char	*sp;
+	size_t			i;
+	unsigned char	*sp;
 
 	i = 0;
-	sp = (const unsigned char *)s;
-	while (i < n && sp[i])
+	sp = (unsigned char *)s;
+	while (i < n)
 	{
 		if (sp[i] == c)
-			return ((void *)&sp[i]);
+			return (&sp[i]);
 		i++;
 	}
 	return (NULL);

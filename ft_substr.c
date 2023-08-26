@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <saryu@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:07:13 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/30 17:26:49 by saryu            ###   ########.fr       */
+/*   Updated: 2023/08/25 14:08:56 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
  * The substring begins at index 'start' and is of maximum size 'len'.
  * */
 
-char    *ft_substr(char const *s, unsigned int start, size_t len) {
+char    *ft_substr(char const *s, unsigned int start, size_t len)
+{
     size_t  i;
     size_t  j;
     char    *result;

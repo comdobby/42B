@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <saryu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:37:24 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/24 16:01:21 by saryu            ###   ########.fr       */
+/*   Updated: 2023/08/26 12:08:12 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,33 +17,42 @@
  * The atoi() function converts the initial portion of the string pointed to by nptr to int.
 */
 
-int	ft_atoi(const char *nptr)
+int	ft_check(char c)
 {
-	int	i;
-	int	sign;
-	int	result;
-
-	i = 0;
-	result = 0;
-	sign = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	while (nptr[i] == '-' || nptr[i] == '+')
-	{
-		if (nptr[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (nptr[i] && (nptr[i] >= '0' && nptr[i] <= '9'))
-	{
-		result *= 10;
-        result += nptr[i] - 48;
-		i++;
-	}
-	result = result * sign;
-	return (result);
+	if (c == ' ' || c == '\n' || c == '\t'
+		|| c == '\v' || c == '\f' || c == '\r')
+		return (1);
+	else
+		return (0);
 }
-/*
+
+int	ft_atoi(const char *str)
+{
+	long	number;
+	long	sign;
+	size_t	i;
+
+	number = 0;
+	sign = 1;
+	i = 0;
+	while ((str[i] != '\0') && ft_check(str[i]) == 1)
+		i++;
+	if (str[i] == '-')
+		sign = -1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while ((str[i] >= '0' && str[i] <= '9') && (str[i] != '\0'))
+	{
+		number = (number * 10) + (str[i] - 48);
+		if (number > 2147483647 && sign == 1)
+			return (-1);
+		if (number > 2147483648 && sign == -1)
+			return (0);
+		i++;
+	}
+	return (number * sign);
+}
+
 #include <stdio.h>
 int	main(void)
 {
@@ -61,4 +70,4 @@ int	main(void)
 	printf("%d\n", ft_atoi(str4));
 	printf("%d\n", ft_atoi(str5));
 	return (0);
-}*/
+}

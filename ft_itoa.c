@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 21:18:04 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 12:27:59 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 12:53:54 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,8 @@ int     check_len(int n)
 char    *ft_itoa(int n)
 {
     int     i;
-    int     j;
     char    *result;
     
-    j = 0;
     i = check_len(n);
     result = malloc(sizeof(char) * i + 1);
     if (!result)

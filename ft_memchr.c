@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:36:45 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/21 17:32:37 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:13:11 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
  * the memory area pointed to by s are interpreted as unsigned char.
  * */
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	const unsigned char *sp;
+	size_t				i;
+	const unsigned char	*sp;
 
 	i = 0;
 	sp = (const unsigned char *)s;

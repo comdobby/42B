@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 16:33:41 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/16 20:21:53 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:13:59 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
  * pointed to by s with the constant byte c.
  * */
 
-void    *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t i;
-	unsigned char *p;
+	size_t			i;
+	unsigned char	*p;
 
 	i = 0;
 	p = (unsigned char *)s;

@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:46:31 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/21 17:47:44 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:13:21 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
  * of the memory areas s1 and s2.
  * */
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
-	const unsigned char *sp1;
-	const unsigned char *sp2;
+	size_t				i;
+	const unsigned char	*sp1;
+	const unsigned char	*sp2;
 
 	i = 0;
 	sp1 = (const unsigned char *)s1;

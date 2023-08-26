@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 21:18:04 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 12:53:54 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:12:58 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * Negative numbers must be handled.
  * */
 
-int     check_len(int n)
+int check_len(int n)
 {
     int i;
 

@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:37:24 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 12:30:03 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:11:26 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int    ft_check(char c)
       return (0);
 }
 
-int    ft_atoi(const char *str)
+int   ft_atoi(const char *str)
 {
-   long   number;
-   long   sign;
-   size_t i;
+   long     number;
+   long     sign;
+   size_t   i;
 
    number = 0;
    sign = 1;

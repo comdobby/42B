@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:51:37 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/21 16:27:33 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:15:35 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] != '\0' && s2[i] != '\0' && i < n)

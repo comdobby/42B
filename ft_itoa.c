@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 21:18:04 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 14:19:05 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 20:30:59 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,18 @@
  * received as an argument. Negative numbers must be handled.
  * */
 
-int	check_len(int n)
+int	check_len(long n)
 {
 	int	i;
 
 	i = 0;
-	if (n >= 0 && n <= 9)
-		return (1);
 	if (n < 0)
 	{
 		i++;
 		n *= -1;
 	}
+	if (n >= 0 && n <= 9)
+		return (1);
 	while (n > 0)
 	{
 		n /= 10;
@@ -41,24 +41,26 @@ int	check_len(int n)
 char	*ft_itoa(int n)
 {
 	int		i;
+	long	nb;
 	char	*result;
 
-	i = check_len(n);
-	result = malloc(sizeof(char) * i + 1);
+	nb = n;
+	i = check_len(nb);
+	result = malloc(sizeof(char) * (i + 1));
 	if (!result)
 		return (NULL);
 	if (n < 0)
 	{
 		result[0] = '-';
-		n *= -1;
+		nb *= -1;
 	}
 	result[i] = '\0';
-	while (n > 9)
+	while (nb > 9)
 	{
-		result[--i] = (n % 10) + '0';
-		n /= 10;
+		result[--i] = (nb % 10) + '0';
+		nb /= 10;
 	}
-	result[--i] = n + '0';
+	result[--i] = nb + '0';
 	return (result);
 }
 /*

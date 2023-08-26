@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:07:13 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:42:31 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 20:09:48 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = start;
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
 	result = (char *) malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);

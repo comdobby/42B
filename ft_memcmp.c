@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:46:31 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:13:21 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:26:35 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include "libft.h"
 
 /**
- * The  memcmp()  function compares the first n bytes (each interpreted as unsigned char)
- * of the memory areas s1 and s2.
+ * The  memcmp()  function compares the first n bytes 
+ * (each interpreted as unsigned char) of the memory areas s1 and s2.
  * */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

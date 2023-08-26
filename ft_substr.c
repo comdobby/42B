@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:07:13 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:16:37 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:42:31 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,25 @@
  * The substring begins at index 'start' and is of maximum size 'len'.
  * */
 
-char    *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t  i;
-    size_t  j;
-    char    *result;
+	size_t	i;
+	size_t	j;
+	char	*result;
 
-    i = 0;
-    j = start;
-    result = (char *) malloc(sizeof(char) * (len + 1));
-    if (!result)
-        return (NULL);
-    while (i < len && s[j] != '\0')
-    {
-        result[i] = s[j];
-        i++;
-        j++;
-    }
-    result[i] = '\0';
-    return (result);
+	i = 0;
+	j = start;
+	result = (char *) malloc(sizeof(char) * (len + 1));
+	if (!result)
+		return (NULL);
+	while (i < len && s[j] != '\0')
+	{
+		result[i] = s[j];
+		i++;
+		j++;
+	}
+	result[i] = '\0';
+	return (result);
 }
 /*
 #include <stdio.h>

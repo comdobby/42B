@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 16:03:12 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:15:50 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:30:19 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 #include "libft.h"
 
 /**
- * The strnstr() function locates the first occurrence of the null-terminated string little in the string big, 
- * where not more than len characters are searched. Characters that appear after a ‘\0’ character are not searched.
- * Since the strnstr() function is a FreeBSD specific API, it should only be used when portability is not a concern.
+ * The strnstr() function locates the first occurrence of 
+ * the null-terminated string little in the string big, 
+ * where not more than len characters are searched. 
+ * Characters that appear after a ‘\0’ character are not searched.
+ * Since the strnstr() function is a FreeBSD specific API, 
+ * it should only be used when portability is not a concern.
 */
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

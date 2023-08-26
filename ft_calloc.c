@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saryu <saryu@student.42berlin.de>          +#+  +:+       +#+        */
+/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 13:36:20 by saryu             #+#    #+#             */
-/*   Updated: 2023/05/29 13:46:32 by saryu            ###   ########.fr       */
+/*   Updated: 2023/08/26 12:24:09 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void    *ft_calloc(size_t count, size_t size)
     size_t  total_size;
 
     total_size = count * size;
-    //check overflow, if count * size > max of size_t, return NULL
     if (total_size / size != count)
         return (NULL);
     result = malloc(total_size);
@@ -34,9 +33,3 @@ void    *ft_calloc(size_t count, size_t size)
     ft_bzero(result, (count * size));
     return (result);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-    return (0);
-}*/

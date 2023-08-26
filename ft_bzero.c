@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:24:51 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/21 17:24:00 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 12:26:53 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 void   ft_bzero(void *s, size_t n)
 {
-	int i;
-	unsigned char *p;
+	size_t			i;
+	unsigned char	*p;
 
 	i = 0;
 	p = (unsigned char *)s;

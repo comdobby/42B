@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:36:45 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 19:49:31 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 19:57:46 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	sp = (unsigned char *)s;
 	while (i < n)
 	{
-		if (sp[i] == c)
+		if (sp[i] == (unsigned char)c)
 			return (&sp[i]);
 		i++;
 	}

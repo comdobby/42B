@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:32:12 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:15:58 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/26 13:21:18 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
@@ -43,4 +43,4 @@ int	main(void)
 	printf("%s\n", ft_strrchr(s, 'a'));
 	printf("%s\n", strrchr(s, 'a'));
 	return (0);
-}
+}*/

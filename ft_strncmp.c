@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:51:37 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 19:37:36 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/27 22:10:21 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #include "libft.h"
 
 /**
- * The strncmp() function compares only the first (at most) n bytes of s1 and s2.
+ * The strncmp() function compares only the first (at most) 
+ * n bytes of s1 and s2.
 */
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

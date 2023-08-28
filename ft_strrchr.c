@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:32:12 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 13:21:18 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/28 15:02:20 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,13 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	size_t	len;
 
-	i = ft_strlen(s);
-	while (i > 0)
-	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
-	}
-	if (s[i] == c)
-		return ((char *)&s[i]);
+	len = ft_strlen(s);
+	while (len != 0 && s[len] != (char)c)
+		len--;
+	if (s[len] == (char)c)
+		return ((char *)&s[len]);
 	return (NULL);
 }
 /*

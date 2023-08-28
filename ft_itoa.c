@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 21:18:04 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 20:30:59 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/28 15:12:56 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,16 @@ int	check_len(long n)
 	int	i;
 
 	i = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
-		i++;
 		n *= -1;
+		i++;
 	}
-	if (n >= 0 && n <= 9)
-		return (1);
 	while (n > 0)
 	{
-		n /= 10;
+		n = n / 10;
 		i++;
 	}
 	return (i);

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/01 18:54:35 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/28 11:49:04 by saeraryu         ###   ########.fr       */
+/*   Created: 2023/08/28 12:32:18 by saeraryu          #+#    #+#             */
+/*   Updated: 2023/08/28 12:44:39 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-/**
- * Outputs the string 's' to the given file descriptor followed by a newline.
- * */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	size_t	i;
 
-void	ft_putendl_fd(char *s, int fd)
-{
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-    char str[10] = "korea";
-    ft_putendl_fd(str, 1);
-    return (0);
-}*/

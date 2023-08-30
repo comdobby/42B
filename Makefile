@@ -6,18 +6,19 @@
 #    By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/24 16:18:07 by saryu             #+#    #+#              #
-#    Updated: 2023/08/30 11:00:14 by saeraryu         ###   ########.fr        #
+#    Updated: 2023/08/30 11:28:47 by saeraryu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 #Name of our executable file
 
-INCLUDE = ./libft.h
+HEADER = libft.h
 #It's for header
 
 CC = cc
-CCFLAG = -Wall -Wextra -Werror
+
+CCFLAG = -Wall -Wextra -Werror -c
 #for compile and compile flags
 
 AR = ar rcs
@@ -33,29 +34,39 @@ SRCS_M = ft_isascii.c ft_strlcat.c ft_strnstr.c\
  ft_memset.c ft_memcpy.c ft_memmove.c ft_bzero.c ft_memchr.c\
  ft_memcmp.c ft_calloc.c ft_strdup.c ft_substr.c ft_strjoin.c\
  ft_strtrim.c ft_split.c ft_itoa.c ft_putchar_fd.c ft_putstr_fd.c\
- ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c ft_striteri.c\
- ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
- ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+ ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c ft_striteri.c
 #My source files. I want to check it so just use two example files
 
+BONUS_M =  ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+ ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+#My bonus file
+
 SRCS = $(SRCS_M)
+
+BONUS = $(BONUS_M)
 
 OBJS = $(SRCS:.c=.o)
 #My objects files. SRCS.c -> SRCS.o It means it ganna be chage the end of file from .c to .o. File name is same.
 
+OBJSBONUS = $(BONUS:.c=.o)
+#My bonus objects files.
+
 all: $(NAME)
 #It is default command of Makefile. It follow the rule of $(NAME)
-
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
-#It links OBJS files and makes a library file
 
 %.o: %.c
 	$(CC) $(CCFLAG) -c $< -o $@
 #make all .c files change to .o / -c: compile $<: first dependency file(here .c files) -o: option(for name of executable file like a.out) $@: target(here .o files)
 
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+#It links OBJS files and makes a library file
+
+bonus: $(OBJS) $(OBJSBONUS)
+	$(AR) $(NAME) $(OBJS) $(OBJSBONUS)
+
 clean:
-	$(RM) $(OBJS) $(NAME)
+	$(RM) $(OBJS) $(OBJSBONUS) $(NAME)
 #delete all object files
 
 fclean: clean

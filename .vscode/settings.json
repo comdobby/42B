@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "sstream": "c"
+        "sstream": "c",
+        "libft.h": "c",
+        "__node_handle": "c",
+        "unistd.h": "c"
     }
 }

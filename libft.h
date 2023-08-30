@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 11:43:06 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/30 11:00:03 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/30 11:36:16 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 /* library */
 # include <unistd.h>
 # include <stdlib.h>
+# include <stddef.h>
 
 /* functions*/
 int		ft_isalpha(int c);

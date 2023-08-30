@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 10:22:01 by saeraryu          #+#    #+#             */
-/*   Updated: 2023/08/30 10:25:16 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/30 11:39:54 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	size;
+	int		size;
+	t_list	node;
 
 	size = 0;
-	while (lst != NULL)
+	node = lst;
+	while (node)
 	{
-		lst = lst->next;
+		node = node->next;
 		size++;
 	}
 	return (size);

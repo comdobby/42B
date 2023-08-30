@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 10:40:17 by saeraryu          #+#    #+#             */
-/*   Updated: 2023/08/30 11:41:34 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/30 11:46:33 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (lst && new)
 	{
-		if (!*lst)
+		if (*lst == NULL)
 			*lst = new;
-		last = ft_lstlast(*lst);
-		last->next = new;
+		else
+		{
+			last = ft_lstlast(*lst);
+			last->next = new;
+		}
 	}
 }

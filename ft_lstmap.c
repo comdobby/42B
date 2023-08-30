@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 10:59:39 by saeraryu          #+#    #+#             */
-/*   Updated: 2023/08/30 11:13:13 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/30 11:47:25 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 	t_list	*new_list;
 
-	new_node = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
+	new_node = NULL;
 	while (lst)
 	{
 		new_node = ft_lstnew(f(lst->content));

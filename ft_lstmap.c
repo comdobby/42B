@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 10:59:39 by saeraryu          #+#    #+#             */
-/*   Updated: 2023/08/30 12:01:58 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/08/30 12:02:40 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&new_node, new_list);
 		lst = lst->next;
 	}
-	return (ret);
+	return (new_node);
 }

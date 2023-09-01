@@ -6,7 +6,7 @@
 /*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 13:36:20 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 14:29:45 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/09/01 21:30:12 by saeraryu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*result;
+	char	*result;
 	size_t	total_size;
 
 	total_size = count * size;
@@ -32,5 +32,5 @@ void	*ft_calloc(size_t count, size_t size)
 	if (!result)
 		return (NULL);
 	ft_bzero(result, (count * size));
-	return (result);
+	return ((void *)result);
 }

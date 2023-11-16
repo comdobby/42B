@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 17:15:03 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/17 00:22:32 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/17 00:25:08 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 		return (ft_memcpy(dp, sp, n));
+	return (dp);
 }
 /*
 #include <stdio.h>

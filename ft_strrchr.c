@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:32:12 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/28 15:02:20 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/11/17 00:44:50 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,17 @@ char	*ft_strrchr(const char *s, int c)
 int	main(void)
 {
 	char	s[20] = "abbbbbbbb";
+	char	s2[20] = "ababababab";
+	char	s3[20] = "a";
+	char	s4[20] = "";
 
 	printf("%s\n", ft_strrchr(s, 'a'));
 	printf("%s\n", strrchr(s, 'a'));
+	printf("%s\n", ft_strrchr(s2, 'a'));
+	printf("%s\n", strrchr(s2, 'a'));
+	printf("%s\n", ft_strrchr(s3, 'a'));
+	printf("%s\n", strrchr(s3, 'a'));
+	printf("%s\n", ft_strrchr(s4, 'a'));
+	printf("%s\n", strrchr(s4, 'a'));
 	return (0);
 }*/

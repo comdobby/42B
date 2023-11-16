@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:51:37 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/17 00:53:03 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/17 00:53:32 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	else
 		return (s1p[i] - s2p[i]);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 int	main(void)
@@ -57,4 +57,4 @@ int	main(void)
 	printf("%d\n", ft_strncmp(s3, s4, 2));
 	printf("%d\n", strncmp(s3, s4, 2));
 	return (0);
-}
+}*/

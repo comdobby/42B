@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:51:37 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/27 22:10:21 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/11/17 00:53:03 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,31 +27,34 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	s1p = (unsigned char *)s1;
 	s2p = (unsigned char *)s2;
-	while ((s1p[i] || s2p[i]) && i < n)
+	while (i < n && s1p[i] || s2p[i])
 	{
-		if (s1p[i] > s2p[i] || s1p[i] < s2p[i])
+		if (s1p[i] == s2p[i])
+		{
+			i++;
+			continue ;
+		}
+		else if ((s1p[i] > s2p[i]) || (s1p[i] < s2p[i]))
 			return (s1p[i] - s2p[i]);
-		i++;
 	}
-	if (i == n || (!s1p[i] && !s2p[i]))
+	if (i == n || s1p[i] == '\0' && s2p[i] == '\0')
 		return (0);
-	else if (s1p[i] > s2p[i] || s1p[i] < s2p[i])
+	else
 		return (s1p[i] - s2p[i]);
-	return (0);
 }
-/*
+
 #include <stdio.h>
 #include <string.h>
 int	main(void)
 {
-	char	*s1 = "aaa";
-	char	*s2 = "aac";
-	char	*s3 = "adb";
-	char	*s4 = "abb";
+	char	*s1 = "aac";
+	char	*s2 = "aaa";
+	char	*s3 = "sadf";
+	char	*s4 = "sdsd";
 
 	printf("%d\n", ft_strncmp(s1, s2, 3));
 	printf("%d\n", strncmp(s1, s2, 3));
 	printf("%d\n", ft_strncmp(s3, s4, 2));
 	printf("%d\n", strncmp(s3, s4, 2));
 	return (0);
-}*/
+}

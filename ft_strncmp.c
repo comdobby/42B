@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:51:37 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/17 00:53:32 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/17 00:56:23 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	s1p = (unsigned char *)s1;
 	s2p = (unsigned char *)s2;
-	while (i < n && s1p[i] || s2p[i])
+	while (i < n && (s1p[i] || s2p[i]))
 	{
 		if (s1p[i] == s2p[i])
 		{
@@ -37,7 +37,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		else if ((s1p[i] > s2p[i]) || (s1p[i] < s2p[i]))
 			return (s1p[i] - s2p[i]);
 	}
-	if (i == n || s1p[i] == '\0' && s2p[i] == '\0')
+	if (i == n || (s1p[i] == '\0' && s2p[i] == '\0'))
 		return (0);
 	else
 		return (s1p[i] - s2p[i]);

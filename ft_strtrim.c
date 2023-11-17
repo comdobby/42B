@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:44:51 by saryu             #+#    #+#             */
-/*   Updated: 2023/08/26 14:28:44 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:52:35 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int main()
 {
-    char str[] = "aaaaaaaaaassadffffsmarcelaaaaaaasd";
-    char set[] = "asd";
+    char str[] = "cccabababccc";
+    char set[] = "ac";
     char *p;
 
     printf("%s\n", str);

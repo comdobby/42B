@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: saeraryu <saeraryu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 10:09:30 by saeraryu          #+#    #+#             */
-/*   Updated: 2023/08/30 11:36:49 by saeraryu         ###   ########.fr       */
+/*   Updated: 2023/11/19 12:25:57 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,21 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
+/*
+int mian()
+{
+	t_list	*this;
+	t_list	*first;
+	int		i;
+
+	i = 0;
+	while (i < 10)
+	{
+		this = ft_lstnew((void *)&i);
+		if (i == 0)
+			first = this;
+		ft_lstadd_back(&first, this);
+		i++;
+	}
+	
+}*/

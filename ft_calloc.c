@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 13:36:20 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/20 20:30:07 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/21 19:45:47 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,16 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*result;
-	size_t	total_size;
+	void	*result;
 
-	total_size = count * size;
-	if (total_size / size != count)
-		return (NULL);
-	result = malloc(total_size);
+	result = malloc(count * size);
 	if (!result)
 		return (NULL);
 	ft_bzero(result, (count * size));
-	return ((void *)result);
+	return (result);
 }
+/*
+int main()
+{
+	// original calloc 함수와 똑같이 작동하는지 확인하기.
+}*/

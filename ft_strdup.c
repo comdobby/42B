@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 14:36:23 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/21 19:47:18 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/21 22:07:16 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,17 @@ char	*ft_strdup(const char *s1)
 {
 	char		*result;
 	size_t		len;
+	size_t		i;
 
 	len = ft_strlen(s1);
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
-	ft_strlcpy(result, s1, len + 1);
-	result[len + 1] = '\0';
+	while (i < len)
+	{
+		result[i] = s1[i];
+		i++;
+	}
+	result[i] = '\0';
 	return (result);
 }

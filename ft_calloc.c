@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 13:36:20 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/21 19:45:47 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/21 22:07:24 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(result, (count * size));
 	return (result);
 }
-/*
-int main()
-{
-	// original calloc 함수와 똑같이 작동하는지 확인하기.
-}*/

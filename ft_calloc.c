@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 13:36:20 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/23 14:22:39 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/23 14:29:27 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*result;
 
-	if (count == 0 || size == 0 || SIZE_MAX / count < size)
+	if ((size && count) && (count * size < size || count * size < count))
 		return (NULL);
 	result = malloc(count * size);
 	if (!result)

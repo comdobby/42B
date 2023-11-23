@@ -6,7 +6,7 @@
 #    By: dobby <dobby@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/24 16:18:07 by saryu             #+#    #+#              #
-#    Updated: 2023/11/23 16:29:37 by dobby            ###   ########.fr        #
+#    Updated: 2023/11/23 16:39:06 by dobby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,11 +62,11 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 #It links OBJS files and makes a library file
 
-bonus: $(OBJS) $(OBJSBONUS)
-	$(AR) $(NAME) $(OBJSBONUS)
+bonus: $(OBJ) $(OBJSBONUS)
+	$(AR) $(NAME) $(OBJ) $(OBJSBONUS)
 
 clean:
-	$(RM) $(OBJS) $(OBJSBONUS) $(NAME)
+	$(RM) $(OBJS) $(OBJSBONUS)
 #delete all object files
 
 fclean: clean

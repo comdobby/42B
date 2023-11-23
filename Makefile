@@ -6,7 +6,7 @@
 #    By: dobby <dobby@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/24 16:18:07 by saryu             #+#    #+#              #
-#    Updated: 2023/11/20 20:38:14 by dobby            ###   ########.fr        #
+#    Updated: 2023/11/23 16:16:58 by dobby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,5 +76,5 @@ fclean: clean
 re: fclean all
 #restart. clean and start 'make' again
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
 #ignore same file name like 'all', 'clean', etc.

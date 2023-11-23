@@ -6,7 +6,7 @@
 /*   By: dobby <dobby@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:27:53 by saryu             #+#    #+#             */
-/*   Updated: 2023/11/23 16:03:27 by dobby            ###   ########.fr       */
+/*   Updated: 2023/11/23 16:08:45 by dobby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (s2 && s2[j])
 	{
-		result[j] = s2[j];
+		result[i] = s2[j];
 		i++;
 		j++;
 	}

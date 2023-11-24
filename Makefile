@@ -6,7 +6,7 @@
 #    By: dobby <dobby@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/24 16:18:07 by saryu             #+#    #+#              #
-#    Updated: 2023/11/23 16:39:06 by dobby            ###   ########.fr        #
+#    Updated: 2023/11/23 16:16:58 by dobby            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ AR = ar rcs
 RM = rm -f
 #for delete(clean) files
 
-SRCS_M = ft_isascii.c ft_strlcat.c ft_strnstr.c\
+SRCS = ft_isascii.c ft_strlcat.c ft_strnstr.c\
  ft_atoi.c ft_isdigit.c ft_strlcpy.c ft_strrchr.c\
  ft_isalnum.c ft_isprint.c ft_strlen.c ft_tolower.c\
  ft_isalpha.c ft_strchr.c ft_strncmp.c ft_toupper.c\
@@ -37,13 +37,9 @@ SRCS_M = ft_isascii.c ft_strlcat.c ft_strnstr.c\
  ft_putendl_fd.c ft_putnbr_fd.c ft_strmapi.c ft_striteri.c
 #My source files
 
-BONUS_M =  ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+BONUS =  ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
  ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 #My bonus files
-
-SRCS = $(SRCS_M)
-
-BONUS = $(BONUS_M)
 
 OBJS = $(SRCS:.c=.o)
 #My objects files. SRCS.c -> SRCS.o It means it ganna be chage the end of file from .c to .o. File name is same.
@@ -62,8 +58,8 @@ $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 #It links OBJS files and makes a library file
 
-bonus: $(OBJ) $(OBJSBONUS)
-	$(AR) $(NAME) $(OBJ) $(OBJSBONUS)
+bonus: $(OBJS) $(OBJSBONUS)
+	$(AR) $(NAME) $(OBJS) $(OBJSBONUS)
 
 clean:
 	$(RM) $(OBJS) $(OBJSBONUS)
@@ -76,5 +72,5 @@ fclean: clean
 re: fclean all
 #restart. clean and start 'make' again
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
 #ignore same file name like 'all', 'clean', etc.

@@ -42,6 +42,16 @@ int	get_count(const char *s, char c)
 	return (count);
 }
 
+void	split_free(char **result, size_t split_i)
+{
+	while (split_i > 1)
+	{
+		free(result[split_i - 2]);
+		split_i--;
+	}
+	free(result);
+}
+
 char	**split_str(char const *s, char c, char **result)
 {
 	size_t	i;
@@ -58,6 +68,11 @@ char	**split_str(char const *s, char c, char **result)
 			while (s[i] != c && s[i])
 				i++;
 			result[split_i++] = ft_substr(s, start, i - start);
+			if (!result[split_i - 1])
+			{
+				split_free(result, split_i);
+				return (NULL);
+			}
 		}
 		else
 			i++;
